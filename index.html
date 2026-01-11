@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer by dani1kx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Randomizer by dani1kx</h1>
+            </div>
+            <div class="header-tabs">
+                <button class="tab active" data-tab="wheel">Wheel</button>
+                <button class="tab" data-tab="history">History</button>
+                <button class="tab" data-tab="stats">Statistics</button>
+            </div>
+        </header>
+
+        <div class="tab-content active" id="wheelTab">
+            <div class="main-content">
+                <div class="input-section">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="itemInput" 
+                            placeholder="Add option..."
+                            class="input-field"
+                        >
+                        <input 
+                            type="number" 
+                            id="weightInput" 
+                            placeholder="Weight"
+                            class="input-field weight-input"
+                            min="1"
+                            max="100"
+                            value="1"
+                        >
+                        <button id="addBtn" class="btn btn-primary">Add</button>
+                    </div>
+                    
+                    <div class="input-actions">
+                        <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+                        <button id="shuffleBtn" class="btn btn-secondary">Shuffle</button>
+                        <button id="importBtn" class="btn btn-secondary">Import</button>
+                        <button id="exportBtn" class="btn btn-secondary">Export</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search options..."
+                            class="input-field"
+                        >
+                    </div>
+                    
+                    <div class="items-list" id="itemsList">
+                        <p class="empty-state">Add options to choose from</p>
+                    </div>
+                </div>
+
+                <div class="wheel-section">
+                    <div class="wheel-container">
+                        <canvas id="wheelCanvas"></canvas>
+                        <div class="wheel-pointer"></div>
+                    </div>
+                    <div class="result-display" id="resultDisplay">
+                        <p class="result-text">Click Spin</p>
+                        <button id="copyResultBtn" class="btn-icon" style="display: none;">📋</button>
+                    </div>
+                    <div class="spin-controls">
+                        <button id="spinBtn" class="btn btn-spin" disabled>Spin</button>
+                        <div class="spin-settings">
+                            <label class="speed-label">Speed</label>
+                            <div class="speed-buttons">
+                                <button class="speed-btn" data-speed="1">Slow</button>
+                                <button class="speed-btn active" data-speed="5">Medium</button>
+                                <button class="speed-btn" data-speed="10">Fast</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="historyTab">
+            <div class="history-section">
+                <div class="history-header">
+                    <h2>Results History</h2>
+                    <button id="clearHistoryBtn" class="btn btn-secondary">Clear History</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="empty-state">No results yet</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="statsTab">
+            <div class="stats-section">
+                <h2>Statistics</h2>
+                <div class="stats-grid" id="statsGrid">
+                    <p class="empty-state">No statistics available</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="importModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Import Options</h2>
+                <button class="modal-close" id="closeImportBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="importTextarea" placeholder="Paste options here, one per line or comma-separated" class="textarea-field"></textarea>
+                <button id="confirmImportBtn" class="btn btn-primary">Import</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
