@@ -6,25 +6,26 @@
 - 🎨 **Interactive Wheel** — Smooth animations and customizable spinning wheel  
 - ⚖️ **Weighted Options** — Assign different weights to influence selection probability  
 - 📝 **Item Management** — Add, edit, remove, and search options easily  
-- 📊 **Statistics** — Track selection history and view detailed statistics  
-- 💾 **Import/Export** — Save and load option sets for later use  
+- 📤 **Import/Export** — Save and load option sets for later use  
 - 🔍 **Search & Filter** — Quickly find specific options in large lists  
-- 🎮 **Speed Control** — Adjustable spinning speed for different experiences  
+- 📊 **Statistics** — Track spin history and analyze selection patterns  
 - 📱 **Responsive Design** — Works seamlessly on desktop and mobile devices  
+- 🎯 **Clean Interface** — Streamlined design focused on core functionality  
 
 ## 🚀 How to Use
 - **Add Options** — Enter items and assign weights (optional)
 - **Spin the Wheel** — Click the spin button to make a random selection
-- **View History** — Track all previous results in the History tab
-- **Analyze Stats** — See selection frequency and statistics in the Stats tab
+- **Manage Items** — Edit, remove, shuffle, or clear all options
+- **View History** — Track all previous spins and results
+- **Analyze Stats** — View detailed statistics about your selections
 - **Save/Load** — Export your option sets and import them later
 
 ## 🛠️ Technologies
 - **HTML5**
-- **CSS3** with modern animations
-- **Vanilla JavaScript** (ES6+)
-- **Canvas API** for wheel rendering
-- **LocalStorage** for data persistence
+- **CSS3** — Modern animations, glassmorphism effects, and responsive design
+- **Vanilla JavaScript** — ES6+ features with no external dependencies
+- **Canvas API** — High-performance wheel rendering with DPI scaling
+- **LocalStorage** — Persistent data storage for items and history
 
 ## 📦 Installation & Usage
 ```bash
